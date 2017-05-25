@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ignore .con
+*.con
+
 # C extensions
 *.so
 
@@ -99,3 +102,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+.idea/
