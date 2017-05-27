@@ -85,12 +85,18 @@ class CtpQuote(QuoteAdapter):
         self.DicTick[tick.Instrument] = tick
         _thread.start_new_thread(self.OnRtnTick, (tick,))
 
+    def __OnRspSubMarketData(self):
+        _thread.start_new_thread(self.OnRspSubMarketData, ())
+
     def OnFrontDisConnected(self, error=0):
         """"""
         pass
 
     def OnRspUserLogin(self, info=InfoField):
         """"""
+        pass
+
+    def OnRspSubMarketData(self):
         pass
 
     # ----------------------------------------------------------------------
